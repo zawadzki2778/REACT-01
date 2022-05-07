@@ -11,10 +11,11 @@ const MyPosts = () => {
                 <button>add post</button>
             </div>
             <div className={s.posts}>
-                <Post />
-                <Post />
+                <Post message='Hi! How are you?' likeCount='5'/>
+                <Post message='Its my first post)' likeCount='17'/>
             </div>
         </div>
     )
-}
+};
+
 export default MyPosts;
