@@ -1,8 +1,15 @@
 .nav {
   grid-area: n;
   background-color: rgb(235, 238, 35);
+  padding: 20px; 
 }
 
 .item {
-  color: #ffffff;
+  color: rgb(14, 41, 79);
+  text-decoration: none; /*убираем подчеркивание у ссылок */
+}
+
+.active { /* NavLink имеет встроенный класс active, именно он отображается в html разметке в консоле, поэтому стилизуем именно его*/
+  color: rgb(245, 245, 245);
+  text-decoration: none;
 }
