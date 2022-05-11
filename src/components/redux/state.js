@@ -23,6 +23,7 @@ let state = {
             { id: 6, message: 'My way of the Samurai' },
         ],
     },
+    sidebar: {},
 };
 
 export default state;

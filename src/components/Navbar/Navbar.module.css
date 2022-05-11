@@ -13,3 +13,17 @@
   color: rgb(245, 245, 245);
   text-decoration: none;
 }
+.friendsBlock {
+  margin-top: 50px;
+}
+
+.avatarsBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatarsBlock img {
+  max-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+}

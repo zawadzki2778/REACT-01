@@ -7,6 +7,8 @@ import Dialogs from './components/Dialogs/Dialogs';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
+import Maksim from './components/Maksim/Maksim';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = (props) => {
@@ -16,13 +18,14 @@ const App = (props) => {
         <Header />
         <Navbar />
         <div className='app-wrapper-content'>
-          <Routes>           
+          <Routes>                       
             <Route path="/profile" element={<Profile state={props.stateApp.profilePage} />} />
             <Route path="/dialogs/*" element={<Dialogs state={props.stateApp.dialogsPage} />}/>
             {/*добавили /* после dialogs вместо exact, что бы не исчезало меню*/}
             <Route path="/news" element={<News/>}/>
             <Route path="/music" element={<Music/>}/>
             <Route path="/settings" element={<Settings/>}/>
+            <Route path="/maksim" element={<Maksim/>}/>
           </Routes>  
         </div>
       </div>
