@@ -2,16 +2,17 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
-import { dialogs, messages } from '../..';
+// import { dialogs, messages } from '../..'; 
 const Dialogs = (props) => {
     //полная, не сокращённая запись метода map:
-    let dialogsElements = dialogs.map((dialog) => {
+    let dialogsElements = props.dialogs.map((dialog) => {
         return (
             <DialogItem name={dialog.name} id={dialog.id} />
         )
     });
     //запись метода map без return и лишних скобок:
-    let messagesElements = messages.map(messages => <Message message={messages.message} />);
+    let messagesElements = props.messages.map(messages => 
+    <Message message={messages.message} />);
        
     return (
         <div className={s.dialogs}>
