@@ -2,8 +2,8 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
-// import { dialogs, messages } from '../..'; 
-const Dialogs = (props) => {
+
+const Dialogs = (props ) => { // props - он же stateApp, перданный из index.js
     //полная, не сокращённая запись метода map:
     let dialogsElements = props.state.dialogs.map((dialog) => {
         return (
