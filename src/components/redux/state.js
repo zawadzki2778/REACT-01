@@ -6,6 +6,7 @@ let state = {
             {id: 1, message: 'Hi! How are you?', likeCount: 5},
             {id: 2, message: 'Hi! How are you?', likeCount: 17},
         ],
+        newPostText: "IT-Kamasutra",
     },
     dialogsPage: {
         dialogs: [
@@ -25,16 +26,22 @@ let state = {
             { id: 6, message: 'My way of the Samurai' },
         ],
     },
-    sidebar: {},
+    // sidebar: {},
 };
 export default state;
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let newPost = {
         ad: 3,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likeCount: 29
     };
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state);
+};
+
+export let apdateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
     rerenderEntireTree(state);
 };
